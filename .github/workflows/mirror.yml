@@ -22,5 +22,5 @@ jobs:
 
       - name: Push to LearnPay mirror
         run: |
-          git remote add mirror https://learnpayinfo:${{ secrets.LEARNPAY_PUSH_TOKEN }}@github.com/learnpayinfo/Finance01.git
+          git remote add mirror https://learnpayinfo:${{secrets.LEARNPAY_PUSH_TOKEN}}@github.com/learnpayinfo/Finance01.git
           git push mirror main --force
