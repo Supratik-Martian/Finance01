@@ -2,11 +2,11 @@
 
 import { useState, useEffect } from "react";
 
-import { useHeartbeat, useHeartbeatHistory, useTrades, useMarketStatus, useRealtimeTable } from "@/lib/hooks";
-import { MetricCards } from "@/components/metric-cards";
-import { EquityChart } from "@/components/equity-chart";
-import { PositionsTable } from "@/components/positions-table";
-import { AgentStatus } from "@/components/agent-status";
+import { useHeartbeat, useHeartbeatHistory, useTrades, useMarketStatus, useRealtimeTable } from "../lib/hooks";
+import { MetricCards } from "../components/metric-cards";
+import { EquityChart } from "../components/equity-chart";
+import { PositionsTable } from "../components/positions-table";
+import { AgentStatus } from "../components/agent-status";
 import { RefreshCw } from "lucide-react";
 
 export default function OverviewPage() {

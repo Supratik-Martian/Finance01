@@ -1,6 +1,6 @@
 "use client";
 
-import { useHeartbeatHistory } from "@/lib/hooks";
+import { useHeartbeatHistory } from "../../lib/hooks";
 import { Inbox } from "lucide-react";
 
 const AGENT_NAMES = [
@@ -138,12 +138,12 @@ export default function AgentsPage() {
                                 </span>
                                 <span
                                     className={`badge ${r.regime.toLowerCase().includes("bull")
-                                            ? "badge-green"
-                                            : r.regime.toLowerCase().includes("bear")
-                                                ? "badge-red"
-                                                : r.regime.toLowerCase().includes("mean")
-                                                    ? "badge-blue"
-                                                    : "badge-gray"
+                                        ? "badge-green"
+                                        : r.regime.toLowerCase().includes("bear")
+                                            ? "badge-red"
+                                            : r.regime.toLowerCase().includes("mean")
+                                                ? "badge-blue"
+                                                : "badge-gray"
                                         }`}
                                 >
                                     {r.regime.replace(/_/g, " ")}

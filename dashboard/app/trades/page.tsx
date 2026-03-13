@@ -1,6 +1,6 @@
 "use client";
 
-import { useTrades, useRealtimeTable } from "@/lib/hooks";
+import { useTrades, useRealtimeTable } from "../../lib/hooks";
 import { Download, Inbox } from "lucide-react";
 
 export default function TradesPage() {

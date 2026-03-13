@@ -9,7 +9,7 @@ import {
     Tooltip,
     CartesianGrid,
 } from "recharts";
-import type { Heartbeat } from "@/lib/types";
+import type { Heartbeat } from "../lib/types";
 import { Inbox } from "lucide-react";
 
 interface Props {

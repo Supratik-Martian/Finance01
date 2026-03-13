@@ -1,6 +1,6 @@
 "use client";
 
-import { useOrders, useRealtimeTable } from "@/lib/hooks";
+import { useOrders, useRealtimeTable } from "../../lib/hooks";
 import { Inbox } from "lucide-react";
 
 export default function OrdersPage() {
