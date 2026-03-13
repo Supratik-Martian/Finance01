@@ -39,7 +39,7 @@ class BrokerConnection:
 
         data = self.kite.generate_session(request_token, api_secret=self.api_secret)
         self.kite.set_access_token(data["access_token"])
-        logger.info(f"Kite authenticated.")
+        logger.info("Kite authenticated.")
         return data
 
     def get_instruments(self, exchange="NSE"):

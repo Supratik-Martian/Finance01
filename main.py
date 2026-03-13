@@ -151,7 +151,7 @@ def main():
         print(f"  Mode     : {'PAPER' if PAPER else 'LIVE'}")
         print(f"  Capital  : ₹{CAPITAL:,.0f}")
         print(f"  Supabase : {'✅ Connected' if db_logger.connected else '❌ CSV-only'}")
-        print(f"  Brain    : HYDRA-Lite (10 agents)")
+        print("  Brain    : HYDRA-Lite (10 agents)")
         print("=" * 60)
 
         wait_for_market()
