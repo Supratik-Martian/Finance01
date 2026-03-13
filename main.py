@@ -8,6 +8,7 @@ import sys
 import logging
 import time
 from datetime import datetime, time as dt_time
+from zoneinfo import ZoneInfo
 
 # Load .env if present (local dev only; Railway uses env vars directly)
 try:
@@ -47,7 +48,7 @@ logger = logging.getLogger(__name__)
 
 def is_market_hours() -> bool:
     """Check if NSE is open (9:15 AM – 3:30 PM IST, Mon–Fri)."""
-    now = datetime.now()
+    now = datetime.now(ZoneInfo('Asia/Kolkata'))
     if now.weekday() >= 5:  # Saturday/Sunday
         return False
     t = now.time()
@@ -57,7 +58,7 @@ def is_market_hours() -> bool:
 def wait_for_market():
     """Sleep until market opens. Used on Railway to avoid wasting resources."""
     while not is_market_hours():
-        now = datetime.now()
+        now = datetime.now(ZoneInfo('Asia/Kolkata'))
         print(f"\r  💤 Market closed | {now.strftime('%Y-%m-%d %H:%M:%S')} | "
               f"Waiting for 9:15 AM IST...", end="", flush=True)
         time.sleep(60)
